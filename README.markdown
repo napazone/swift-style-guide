@@ -474,8 +474,6 @@ Swift does not require a semicolon after each statement in your code. They are o
 
 Do not write multiple statements on a single line separated with semicolons.
 
-The only exception to this rule is the `for-conditional-increment` construct, which requires semicolons. However, alternative `for-in` constructs should be used where possible.
-
 **Preferred:**
 ```swift
 let swift = "not a scripting language"
@@ -485,8 +483,6 @@ let swift = "not a scripting language"
 ```swift
 let swift = "not a scripting language";
 ```
-
-**NOTE**: Swift is very different to JavaScript, where omitting semicolons is [generally considered unsafe](http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript)
 
 ## Language
 
