@@ -50,27 +50,65 @@ class app_widgetContainer {
 }
 ```
 
-For functions and init methods, prefer named parameters for all arguments unless the context is very clear. Include external parameter names if it makes function calls more readable.
+### Parameters
+
+Use [Apple's recommendations](https://swift.org/documentation/api-design-guidelines.html#parameters). Here is a couple of examples.
+
+> First parameters to methods and functions should not have required argument labels
+
+**Preferred:**
 
 ```swift
-func dateFromString(dateString: String) -> NSDate
-func convertPointAt(column column: Int, row: Int) -> CGPoint
-func timedAction(afterDelay delay: NSTimeInterval, perform action: SKAction) -> SKAction!
-
-// would be called like this:
-dateFromString("2014-03-14")
-convertPointAt(column: 42, row: 13)
-timedAction(afterDelay: 1.0, perform: someOtherAction)
+func convertPointAtColumn(column: Int) {}
+convertPointAtColumn(1)
 ```
 
-For methods, follow the standard Apple convention of referring to the first parameter in the method name:
+**Not Preferred:**
 
 ```swift
-class Counter {
-  func combineWith(otherCounter: Counter, options: Dictionary?) { ... }
-  func incrementBy(amount: Int) { ... }
+func convertPointAtColumn(column col: Int) {}
+convertPointAtColumn(column: 1)
+```
+
+> Other parameters to methods and functions should have required argument labels.
+
+**Preferred:**
+
+```swift
+func convertPointAtColumn(column: Int, row: Int) {}
+convertPointAtColumn(1, row: 1)
+```
+
+**Not Preferred:**
+
+```swift
+func convertPointAtColumn(column: Int, _ row: Int) {}
+convertPointAtColumn(1, 1)
+```
+
+> All parameters to initializers should have required argument labels.
+
+**Preferred:**
+
+```swift
+class Foo {
+  init(column: Int, row: Int) {}
 }
+Foo(column: 1, row: 1)
 ```
+
+**Not Preferred:**
+
+```swift
+class Foo2 {
+  init(_ column: Int, row: Int) {}
+  init(_ column: Int, _ row: Int) {}
+}
+Foo2(2, row: 1)
+Foo2(2, 1)
+```
+
+See [Parameter section](https://swift.org/documentation/api-design-guidelines.html#parameters) in Apple's API Design Guidelines for more details and a couple exceptions.
 
 ### Enumerations
 
