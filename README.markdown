@@ -266,7 +266,7 @@ var diameter: Double {
 
 ## Function Declarations
 
-Keep short function declarations on one line including the opening brace:
+Keep function declarations on one line including the opening brace:
 
 ```swift
 func reticulateSplines(spline: [Double]) -> Bool {
@@ -274,14 +274,7 @@ func reticulateSplines(spline: [Double]) -> Bool {
 }
 ```
 
-For functions with long signatures, add line breaks at appropriate points and add an extra indent on subsequent lines:
-
-```swift
-func reticulateSplines(spline: [Double], adjustmentFactor: Double,
-    translateConstant: Int, comment: String) -> Bool {
-  // reticulate code goes here
-}
-```
+If function declaration gets too long it might indicate you need to refactor it. I.e. you might want to [introduce a parameter object](http://www.refactoring.com/catalog/introduceParameterObject.html) in case parameters naturally go together.
 
 
 ## Closure Expressions
