@@ -1,28 +1,35 @@
 # Swift Style Guide
 
-## Table of Contents
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-* [Naming](#naming)
-  * [Class Prefixes](#class-prefixes)
-* [Spacing](#spacing)
-* [Comments](#comments)
-* [Classes and Structures](#classes-and-structures)
-  * [Use of Self](#use-of-self)
-  * [Protocol Conformance](#protocol-conformance)
-  * [Computed Properties](#computed-properties)
-* [Function Declarations](#function-declarations)
-* [Closure Expressions](#closure-expressions)
-* [Types](#types)
-  * [Constants](#constants)
-  * [Optionals](#optionals)
-  * [Struct Initializers](#struct-initializers)
-  * [Type Inference](#type-inference)
-  * [Syntactic Sugar](#syntactic-sugar)
-* [Control Flow](#control-flow)
-* [Semicolons](#semicolons)
-* [Language](#language)
-* [Credits](#credits)
 
+- [Naming](#naming)
+  - [Parameters](#parameters)
+  - [Enumerations](#enumerations)
+  - [Class Prefixes](#class-prefixes)
+- [Spacing](#spacing)
+- [Comments](#comments)
+- [Classes and Structures](#classes-and-structures)
+  - [Which one to use?](#which-one-to-use)
+  - [Example definition](#example-definition)
+  - [Use of Self](#use-of-self)
+  - [Protocol Conformance](#protocol-conformance)
+  - [Computed Properties](#computed-properties)
+- [Function Declarations](#function-declarations)
+- [Closure Expressions](#closure-expressions)
+- [Types](#types)
+  - [Constants](#constants)
+  - [Optionals](#optionals)
+  - [Struct Initializers](#struct-initializers)
+  - [Type Inference](#type-inference)
+  - [Syntactic Sugar](#syntactic-sugar)
+- [Control Flow](#control-flow)
+- [Semicolons](#semicolons)
+- [Language](#language)
+- [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Naming
 
