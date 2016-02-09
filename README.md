@@ -469,6 +469,9 @@ let message = "Click the button"
 let currentBounds = computeViewBounds()
 var names = [String]()
 let maximumWidth: CGFloat = 106.5
+storage.save { success in
+  //...
+}
 ```
 
 **Not Preferred:**
@@ -476,6 +479,9 @@ let maximumWidth: CGFloat = 106.5
 let message: String = "Click the button"
 let currentBounds: CGRect = computeViewBounds()
 var names: [String] = []
+storage.save { (success: Bool) in
+  //...
+}
 ```
 
 ### Syntactic Sugar
