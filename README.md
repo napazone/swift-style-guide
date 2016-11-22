@@ -178,11 +178,13 @@ if user.isHappy
 **Preferred:**
 ```swift
 let arrayOfStrings = [String]()
+let dictionaryOfValues = [String: Int]()
 ```
 
 **Not Preferred:**
 ```swift
 let arrayOfStrings = [ String ]()
+let dictionaryOfValues = [ String: Int ]()
 ```
 
 * When calling functions or methods do not add extra spaces around the parameters.
