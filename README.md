@@ -173,6 +173,18 @@ if user.isHappy
 
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but having too many sections in a method often means you should refactor into several methods.
 
+* When declaring collection types do not add extra spaces around the Type information.
+
+**Preferred:**
+```swift
+let arrayOfStrings = [String]()
+```
+
+**Not Preferred:**
+```swift
+let arrayOfStrings = [ String ]()
+```
+
 ## Comments
 
 When they are needed, use comments to explain **why** a particular piece of code does something. Comments must be kept up-to-date or deleted.
