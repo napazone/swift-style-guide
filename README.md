@@ -185,6 +185,18 @@ let arrayOfStrings = [String]()
 let arrayOfStrings = [ String ]()
 ```
 
+* When calling functions or methods do not add extra spaces around the parameters.
+
+**Preferred:**
+```swift
+let returnValue = functionCall(aValue, anotherValue)
+```
+
+**Not Preferred:**
+```swift
+let returnValue = functionCall( aValue, anotherValue )
+```
+
 ## Comments
 
 When they are needed, use comments to explain **why** a particular piece of code does something. Comments must be kept up-to-date or deleted.
