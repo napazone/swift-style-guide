@@ -119,14 +119,14 @@ See [Parameter section](https://swift.org/documentation/api-design-guidelines.ht
 
 ### Enumerations
 
-Use UpperCamelCase for enumeration values:
+Use lowerCamelCase for enumeration values:
 
 ```swift
 enum Shape {
-  case Rectangle
-  case Square
-  case Triangle
-  case Circle
+  case rectangle
+  case square
+  case triangle
+  case circle
 }
 ```
 
@@ -172,6 +172,32 @@ if user.isHappy
 ```
 
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but having too many sections in a method often means you should refactor into several methods.
+
+* When declaring collection types do not add extra spaces around the Type information.
+
+**Preferred:**
+```swift
+let arrayOfStrings = [String]()
+let dictionaryOfValues = [String: Int]()
+```
+
+**Not Preferred:**
+```swift
+let arrayOfStrings = [ String ]()
+let dictionaryOfValues = [ String: Int ]()
+```
+
+* When calling functions or methods do not add extra spaces around the parameters.
+
+**Preferred:**
+```swift
+let returnValue = functionCall(aValue, anotherValue)
+```
+
+**Not Preferred:**
+```swift
+let returnValue = functionCall( aValue, anotherValue )
+```
 
 ## Comments
 
