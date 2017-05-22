@@ -422,7 +422,8 @@ Constants are defined using the `let` keyword, and variables with the `var` keyw
 
 ### Optionals
 
-Declare variables and function return types as optional with `?` where a nil value is acceptable.
+Declare variables and function return types as optional with `?` where a nil value is acceptable. In the case of collections prefer empty values to optional unless there's a
+difference in meaning between and emtpy value and a `nil` value.
 
 Use implicitly unwrapped types declared with `!` only for instance variables that you know will be initialized later before use, such as subviews that will be set up in `viewDidLoad`.
 
@@ -448,6 +449,7 @@ For optional binding, shadow the original name when appropriate rather than usin
 ```swift
 var subview: UIView?
 var volume: Double?
+var setOfThings: [Thing] = []
 
 // later on...
 if let subview = subview, volume = volume {
@@ -459,6 +461,7 @@ if let subview = subview, volume = volume {
 ```swift
 var optionalSubview: UIView?
 var volume: Double?
+var setOfThings: [Thing]?
 
 if let unwrappedSubview = optionalSubview {
   if let realVolume = volume {
